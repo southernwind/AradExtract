@@ -126,7 +126,7 @@ namespace AradExtract {
 		private static bool IsFileLocked( string path ) {
 			FileStream stream = null;
 			try {
-				stream = new FileStream( path, FileMode.Open, FileAccess.Read, FileShare.None );
+				stream = new FileStream( path, FileMode.Open, FileAccess.Read );
 			} catch {
 				return true;
 			} finally {

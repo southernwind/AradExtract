@@ -35,6 +35,9 @@
 			this.splitContainer3 = new System.Windows.Forms.SplitContainer();
 			this.lbImg = new System.Windows.Forms.ListBox();
 			this.pb = new System.Windows.Forms.PictureBox();
+			this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+			this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+			this.btnSave = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
@@ -56,6 +59,13 @@
 			this.splitContainer3.Panel2.SuspendLayout();
 			this.splitContainer3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pb)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+			this.splitContainer6.Panel1.SuspendLayout();
+			this.splitContainer6.Panel2.SuspendLayout();
+			this.splitContainer6.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
+			this.splitContainer7.Panel2.SuspendLayout();
+			this.splitContainer7.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// btnExtract
@@ -72,6 +82,7 @@
 			// 
 			this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+			this.splitContainer1.IsSplitterFixed = true;
 			this.splitContainer1.Location = new System.Drawing.Point(0, 0);
 			this.splitContainer1.Name = "splitContainer1";
 			this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -197,7 +208,7 @@
 			// 
 			// splitContainer3.Panel2
 			// 
-			this.splitContainer3.Panel2.Controls.Add(this.pb);
+			this.splitContainer3.Panel2.Controls.Add(this.splitContainer6);
 			this.splitContainer3.Size = new System.Drawing.Size(867, 772);
 			this.splitContainer3.SplitterDistance = 229;
 			this.splitContainer3.TabIndex = 0;
@@ -209,6 +220,7 @@
 			this.lbImg.FormattingEnabled = true;
 			this.lbImg.ItemHeight = 12;
 			this.lbImg.Location = new System.Drawing.Point(0, 0);
+			this.lbImg.Margin = new System.Windows.Forms.Padding(0);
 			this.lbImg.Name = "lbImg";
 			this.lbImg.Size = new System.Drawing.Size(867, 229);
 			this.lbImg.TabIndex = 0;
@@ -220,9 +232,56 @@
 			this.pb.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.pb.Location = new System.Drawing.Point(0, 0);
 			this.pb.Name = "pb";
-			this.pb.Size = new System.Drawing.Size(867, 539);
+			this.pb.Size = new System.Drawing.Size(867, 510);
 			this.pb.TabIndex = 0;
 			this.pb.TabStop = false;
+			// 
+			// splitContainer6
+			// 
+			this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.splitContainer6.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+			this.splitContainer6.IsSplitterFixed = true;
+			this.splitContainer6.Location = new System.Drawing.Point(0, 0);
+			this.splitContainer6.Name = "splitContainer6";
+			this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
+			// 
+			// splitContainer6.Panel1
+			// 
+			this.splitContainer6.Panel1.Controls.Add(this.splitContainer7);
+			// 
+			// splitContainer6.Panel2
+			// 
+			this.splitContainer6.Panel2.Controls.Add(this.pb);
+			this.splitContainer6.Size = new System.Drawing.Size(867, 539);
+			this.splitContainer6.SplitterDistance = 25;
+			this.splitContainer6.TabIndex = 1;
+			this.splitContainer6.TabStop = false;
+			// 
+			// splitContainer7
+			// 
+			this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.splitContainer7.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+			this.splitContainer7.IsSplitterFixed = true;
+			this.splitContainer7.Location = new System.Drawing.Point(0, 0);
+			this.splitContainer7.Name = "splitContainer7";
+			// 
+			// splitContainer7.Panel2
+			// 
+			this.splitContainer7.Panel2.Controls.Add(this.btnSave);
+			this.splitContainer7.Size = new System.Drawing.Size(867, 25);
+			this.splitContainer7.SplitterDistance = 730;
+			this.splitContainer7.TabIndex = 0;
+			this.splitContainer7.TabStop = false;
+			// 
+			// btnSave
+			// 
+			this.btnSave.Location = new System.Drawing.Point(46, 1);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(75, 23);
+			this.btnSave.TabIndex = 0;
+			this.btnSave.Text = "保存";
+			this.btnSave.UseVisualStyleBackColor = true;
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// MainForm
 			// 
@@ -256,6 +315,13 @@
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
 			this.splitContainer3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pb)).EndInit();
+			this.splitContainer6.Panel1.ResumeLayout(false);
+			this.splitContainer6.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+			this.splitContainer6.ResumeLayout(false);
+			this.splitContainer7.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
+			this.splitContainer7.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -274,6 +340,9 @@
 		private System.Windows.Forms.ListBox lbFiles;
 		private System.Windows.Forms.SplitContainer splitContainer5;
 		private System.Windows.Forms.TextBox txtFileNameFilter;
+		private System.Windows.Forms.SplitContainer splitContainer6;
+		private System.Windows.Forms.SplitContainer splitContainer7;
+		private System.Windows.Forms.Button btnSave;
 	}
 }
 

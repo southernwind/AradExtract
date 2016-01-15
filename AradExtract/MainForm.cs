@@ -136,5 +136,13 @@ namespace AradExtract {
 			return false;
 		}
 
+		private void btnSave_Click( object sender, EventArgs e ) {
+			var sfd = new SaveFileDialog();
+			sfd.FileName = this._ext.npkIndexList[this.lbIndex.SelectedIndex].shortName.Substring(0, this._ext.npkIndexList[this.lbIndex.SelectedIndex].shortName.LastIndexOf('.') ) + this._ext.npkIndexList[this.lbIndex.SelectedIndex].NImgHeader.NImgIndex[this.lbImg.SelectedIndex].index + ".png";
+			sfd.Filter = "*.png|*.*";
+			if( sfd.ShowDialog() == DialogResult.OK ) {
+				this._ext.npkIndexList[this.lbIndex.SelectedIndex].NImgHeader.NImgIndex[this.lbImg.SelectedIndex].NImg.ToBitmap().Save(sfd.FileName);
+			}
+		}
 	}
 }

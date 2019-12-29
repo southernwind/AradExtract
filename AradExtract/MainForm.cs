@@ -14,7 +14,7 @@ namespace AradExtract {
 
 		private Extract _ext;
 		private Dictionary<string, string> _fileList;
-		const string DEFAULT_DIR_PATH = @"C:\Nexon\ARADTEST\ImagePacks2";
+		const string DEFAULT_DIR_PATH = @"C:\Nexon\ARAD\ImagePacks2";
 
 
 		public MainForm() {
